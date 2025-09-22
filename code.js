@@ -1,9 +1,8 @@
-let computerChoice;
-let humanChoice;
 let humanScore = 0;
 let computerScore = 0;
 
-function getComputerChoice(computerChoice) {
+function getComputerChoice() {
+  let computerChoice;
   const randomNumber = Math.random();
   if (randomNumber >= 0 && randomNumber < 1/3) {
     return computerChoice = "rock";
@@ -14,10 +13,17 @@ function getComputerChoice(computerChoice) {
   }
 }
 
-function getHumanChoice(humanChoice) {
+function getHumanChoice() {
+  let humanChoice;
   humanChoice = prompt("Please choose one of the three choices: rock, paper or scissors");
   return humanChoice;
 }
 
-console.log(getComputerChoice(computerChoice));
-console.log(getHumanChoice(humanChoice));
+function playRound(humanChoice, computerChoice) {
+  // your code here!
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
