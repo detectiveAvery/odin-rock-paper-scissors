@@ -1,6 +1,5 @@
 let computerChoice;
 let humanChoice;
-humanChoice = prompt("Please choice one of the three choices: rock, paper or scissors");
 let humanScore = 0;
 let computerScore = 0;
 
@@ -16,8 +15,9 @@ function getComputerChoice(computerChoice) {
 }
 
 function getHumanChoice(humanChoice) {
-  return humanChoice;
+  humanChoice = prompt("Please choice one of the three choices: rock, paper or scissors");
+  console.log(humanChoice);
 }
 
 console.log(getComputerChoice(computerChoice));
-console.log(getHumanChoice(humanChoice.toLowerCase()));
+getHumanChoice(humanChoice);
