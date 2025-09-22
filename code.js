@@ -15,9 +15,9 @@ function getComputerChoice(computerChoice) {
 }
 
 function getHumanChoice(humanChoice) {
-  humanChoice = prompt("Please choice one of the three choices: rock, paper or scissors");
-  console.log(humanChoice);
+  humanChoice = prompt("Please choose one of the three choices: rock, paper or scissors");
+  return humanChoice;
 }
 
 console.log(getComputerChoice(computerChoice));
-getHumanChoice(humanChoice);
+console.log(getHumanChoice(humanChoice));
