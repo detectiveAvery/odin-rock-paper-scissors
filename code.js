@@ -20,7 +20,39 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-  // your code here!
+  if (humanChoice === 'rock') {
+    if (computerChoice === 'rock') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
+    } else if (computerChoice === 'paper') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+      computerScore += 1;
+    } else if (computerChoice === 'scissors') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+      humanScore += 1;
+    }
+  } else if (humanChoice === 'paper') {
+    if (computerChoice === 'rock') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+      humanScore += 1;  
+    } else if (computerChoice === 'paper') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
+    } else if (computerChoice === 'scissors') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+      computerScore += 1;
+    }
+  } else if (humanChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+      computerScore += 1;
+    } else if (computerChoice === 'paper') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+      humanScore += 1;
+    } else if (computerChoice === 'scissors') {
+      console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`); 
+    } 
+  }
+
+  console.log(`Computer score is: ${computerScore} - Human score is: ${humanScore}`);
 }
 
 const humanSelection = getHumanChoice();
