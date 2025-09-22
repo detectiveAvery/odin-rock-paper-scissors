@@ -1,6 +1,8 @@
 let computerChoice;
 let humanChoice;
 humanChoice = prompt("Please choice one of the three choices: rock, paper or scissors");
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice(computerChoice) {
   const randomNumber = Math.random();
