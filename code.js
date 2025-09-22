@@ -36,31 +36,45 @@ function playGame() {
     }
   }
 
-  function getComputerChoice() {
-    let computerChoice;
-    const randomNumber = Math.random();
-    if (randomNumber >= 0 && randomNumber < 1 / 3) {
-      return computerChoice = "rock";
-    } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-      return computerChoice = "paper";
-    } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-      return computerChoice = "scissors";
-    }
-  }
+  playFiveRounds(playRound);
 
-  function getHumanChoice() {
-    let humanChoice;
-    humanChoice = prompt("Please choose one of the three choices: rock, paper or scissors");
-    return humanChoice;
-  }
+  alert(`Computer: ${computerScore} - Human: ${humanScore} - ${getWinner(computerScore, humanScore)}`);
+}
 
+function getComputerChoice() {
+  let computerChoice;
+  const randomNumber = Math.random();
+  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    return computerChoice = "rock";
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    return computerChoice = "paper";
+  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+    return computerChoice = "scissors";
+  }
+}
+
+function getHumanChoice() {
+  let humanChoice;
+  humanChoice = prompt("Please choose one of the three choices: rock, paper or scissors");
+  return humanChoice;
+}
+
+function playFiveRounds(playRound) {
   for (let index = 0; index < 5; index++) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
+}
 
-  alert(`SCOREBOARD: Computer: ${computerScore} - Human: ${humanScore}`);
+function getWinner(computerScore, humanScore) {
+  if (computerScore > humanScore) {
+    return "Computer Wins!";
+  } else if (humanScore > computerScore) {
+    return "Human Wins!"
+  } else if (computerScore === humanScore) {
+    return "Draw!"
+  }
 }
 
 playGame();
