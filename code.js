@@ -5,37 +5,35 @@ function playGame() {
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === 'rock') {
       if (computerChoice === 'rock') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
       } else if (computerChoice === 'paper') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
         computerScore += 1;
       } else if (computerChoice === 'scissors') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
         humanScore += 1;
       }
     } else if (humanChoice === 'paper') {
       if (computerChoice === 'rock') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
         humanScore += 1;
       } else if (computerChoice === 'paper') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
       } else if (computerChoice === 'scissors') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
         computerScore += 1;
       }
     } else if (humanChoice === 'scissors') {
       if (computerChoice === 'rock') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Human loses! Computer wins!`);
         computerScore += 1;
       } else if (computerChoice === 'paper') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. Computer loses! Humans wins!`);
         humanScore += 1;
       } else if (computerChoice === 'scissors') {
-        console.log(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
+        alert(`You chose ${humanChoice}, Computer chose ${computerChoice}. It's a tie!`);
       }
     }
-
-    console.log(`Computer score is: ${computerScore} - Human score is: ${humanScore}`);
   }
 
   function getComputerChoice() {
@@ -61,6 +59,8 @@ function playGame() {
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
   }
+
+  alert(`SCOREBOARD: Computer: ${computerScore} - Human: ${humanScore}`);
 }
 
 playGame();
