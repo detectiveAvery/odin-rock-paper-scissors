@@ -1,4 +1,6 @@
 let computerChoice;
+let humanChoice;
+humanChoice = prompt("Please choice one of the three choices: rock, paper or scissors");
 
 function getComputerChoice(computerChoice) {
   const randomNumber = Math.random();
@@ -11,4 +13,9 @@ function getComputerChoice(computerChoice) {
   }
 }
 
+function getHumanChoice(humanChoice) {
+  return humanChoice;
+}
+
 console.log(getComputerChoice(computerChoice));
+console.log(getHumanChoice(humanChoice.toLowerCase()));
